@@ -23,11 +23,12 @@ namespace FirstProj
             var DashPan = parent4.dashboard1;
             var AccountPan = parent4.accountuc1;
             var CartPan = parent4.cartUc1;
+            var HistoryPan = parent4.historyUc1;
 
             CartPan.Show();
             DashPan.Hide();
-            // CartPan.BringToFront();
             AccountPan.Hide();
+            HistoryPan.Hide();
         }
 
         private void ButterflyBtn_Click(object sender, EventArgs e)
@@ -52,7 +53,6 @@ namespace FirstProj
             var AccountPan = parent4.accountuc1;
 
             DashPan.Hide();
-            // AccountPan.BringToFront();
             AccountPan.Show();
         }
 
@@ -78,6 +78,53 @@ namespace FirstProj
             DashPan.Hide();
             AccountPan.Hide();
             HistoryPan.Show();
+        }
+
+        private void CartPicBox_Click(object sender, EventArgs e)
+        {
+            var parent4 = this.Parent as Form1;
+            var DashPan = parent4.dashboard1;
+            var AccountPan = parent4.accountuc1;
+            var CartPan = parent4.cartUc1;
+            var HistoryPan = parent4.historyUc1;
+
+            CartPan.Show();
+            DashPan.Hide();
+            AccountPan.Hide();
+            HistoryPan.Hide();
+        }
+
+        private void HistPicBox_Click(object sender, EventArgs e)
+        {
+            var parent4 = this.Parent as Form1;
+            var DashPan = parent4.dashboard1;
+            var AccountPan = parent4.accountuc1;
+            var CartPan = parent4.cartUc1;
+            var HistoryPan = parent4.historyUc1;
+
+            CartPan.Hide();
+            DashPan.Hide();
+            AccountPan.Hide();
+            HistoryPan.Show();
+        }
+
+        private void AccPicBox_Click(object sender, EventArgs e)
+        {
+            var parent4 = this.Parent as Form1;
+            var DashPan = parent4.dashboard1;
+            var AccountPan = parent4.accountuc1;
+
+            DashPan.Hide();
+            AccountPan.Show();
+        }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+             var parent4 = this.Parent as Form1;
+             var ccCupcakePan = parent4.cupcakeuc1;
+
+             ccCupcakePan.Show();
+             ccCupcakePan.BringToFront();
         }
     }
 }

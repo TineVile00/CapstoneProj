@@ -44,7 +44,6 @@ namespace FirstProj
 
             CartPan.Hide();
             DashPan.Show();
-            // DashPan.BringToFront();
             AccountPan.Hide();
         }
 
@@ -57,11 +56,62 @@ namespace FirstProj
 
             CartPan.Show();
             DashPan.Hide();
-            // CartPan.BringToFront();
             AccountPan.Hide();
         }
 
         private void HistoryLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var parent3 = this.Parent as Form1;
+            var DashPan = parent3.dashboard1;
+            var AccountPan = parent3.accountuc1;
+            var CartPan = parent3.cartUc1;
+            var HistoryPan = parent3.historyUc1;
+
+            CartPan.Hide();
+            DashPan.Hide();
+            AccountPan.Hide();
+            HistoryPan.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var parent3 = this.Parent as Form1;
+            var DashPan = parent3.dashboard1;
+
+            DashPan.Show();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void DashPicBox_Click(object sender, EventArgs e)
+        {
+            var parent3 = this.Parent as Form1;
+            var DashPan = parent3.dashboard1;
+            var AccountPan = parent3.accountuc1;
+            var CartPan = parent3.cartUc1;
+
+            CartPan.Hide();
+            DashPan.Show();
+            AccountPan.Hide();
+        }
+
+        private void CartPicBox_Click(object sender, EventArgs e)
+        {
+            var parent3 = this.Parent as Form1;
+            var DashPan = parent3.dashboard1;
+            var AccountPan = parent3.accountuc1;
+            var CartPan = parent3.cartUc1;
+
+            CartPan.Show();
+            DashPan.Hide();
+            AccountPan.Hide();
+        }
+
+        private void HistPicBox_Click(object sender, EventArgs e)
         {
             var parent3 = this.Parent as Form1;
             var DashPan = parent3.dashboard1;

@@ -26,7 +26,6 @@ namespace FirstProj
 
             CartPan.Hide();
             DashPan.Hide();
-            //AccountPan.BringToFront();
             AccountPan.Show();
 
         }
@@ -40,7 +39,6 @@ namespace FirstProj
 
             CartPan.Hide();
             DashPan.Show();
-           // DashPan.BringToFront();
             AccountPan.Hide();
         }
 
@@ -56,6 +54,62 @@ namespace FirstProj
             DashPan.Hide();
             AccountPan.Hide();
             HistoryPan.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var parent5 = this.Parent as Form1;
+            var DashPan = parent5.dashboard1;
+
+            DashPan.Show();
+        }
+
+        private void DashPicBox_Click(object sender, EventArgs e)
+        {
+            var parent5 = this.Parent as Form1;
+            var DashPan = parent5.dashboard1;
+            var AccountPan = parent5.accountuc1;
+            var CartPan = parent5.cartUc1;
+
+            CartPan.Hide();
+            DashPan.Show();
+            AccountPan.Hide();
+        }
+
+        private void CartLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void HistPicBox_Click(object sender, EventArgs e)
+        {
+            var parent5 = this.Parent as Form1;
+            var DashPan = parent5.dashboard1;
+            var AccountPan = parent5.accountuc1;
+            var CartPan = parent5.cartUc1;
+            var HistoryPan = parent5.historyUc1;
+
+            CartPan.Hide();
+            DashPan.Hide();
+            AccountPan.Hide();
+            HistoryPan.Show();
+        }
+
+        private void AccPicBox_Click(object sender, EventArgs e)
+        {
+            var parent5 = this.Parent as Form1;
+            var DashPan = parent5.dashboard1;
+            var AccountPan = parent5.accountuc1;
+            var CartPan = parent5.cartUc1;
+
+            CartPan.Hide();
+            DashPan.Hide();
+            AccountPan.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

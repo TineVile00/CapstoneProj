@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accountuc));
             panel1 = new Panel();
+            AccPicBox = new PictureBox();
+            HistPicBox = new PictureBox();
+            CartPicBox = new PictureBox();
+            DashPicBox = new PictureBox();
             AccountLabel = new LinkLabel();
             HistoryLabel = new LinkLabel();
             CartLabel = new LinkLabel();
@@ -39,6 +43,10 @@
             panel2 = new Panel();
             SignOutBtn = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)AccPicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)HistPicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CartPicBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DashPicBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -46,6 +54,10 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(3, 9, 64);
+            panel1.Controls.Add(AccPicBox);
+            panel1.Controls.Add(HistPicBox);
+            panel1.Controls.Add(CartPicBox);
+            panel1.Controls.Add(DashPicBox);
             panel1.Controls.Add(AccountLabel);
             panel1.Controls.Add(HistoryLabel);
             panel1.Controls.Add(CartLabel);
@@ -55,6 +67,51 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(202, 560);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
+            // 
+            // AccPicBox
+            // 
+            AccPicBox.BackgroundImage = (Image)resources.GetObject("AccPicBox.BackgroundImage");
+            AccPicBox.BackgroundImageLayout = ImageLayout.Stretch;
+            AccPicBox.Location = new Point(17, 322);
+            AccPicBox.Name = "AccPicBox";
+            AccPicBox.Size = new Size(45, 42);
+            AccPicBox.TabIndex = 13;
+            AccPicBox.TabStop = false;
+            // 
+            // HistPicBox
+            // 
+            HistPicBox.BackgroundImage = (Image)resources.GetObject("HistPicBox.BackgroundImage");
+            HistPicBox.BackgroundImageLayout = ImageLayout.Stretch;
+            HistPicBox.Location = new Point(17, 266);
+            HistPicBox.Name = "HistPicBox";
+            HistPicBox.Size = new Size(45, 42);
+            HistPicBox.TabIndex = 12;
+            HistPicBox.TabStop = false;
+            HistPicBox.Click += HistPicBox_Click;
+            // 
+            // CartPicBox
+            // 
+            CartPicBox.BackgroundImage = (Image)resources.GetObject("CartPicBox.BackgroundImage");
+            CartPicBox.BackgroundImageLayout = ImageLayout.Stretch;
+            CartPicBox.Location = new Point(17, 213);
+            CartPicBox.Name = "CartPicBox";
+            CartPicBox.Size = new Size(45, 42);
+            CartPicBox.TabIndex = 11;
+            CartPicBox.TabStop = false;
+            CartPicBox.Click += CartPicBox_Click;
+            // 
+            // DashPicBox
+            // 
+            DashPicBox.BackColor = Color.FromArgb(3, 9, 64);
+            DashPicBox.BackgroundImage = (Image)resources.GetObject("DashPicBox.BackgroundImage");
+            DashPicBox.BackgroundImageLayout = ImageLayout.Stretch;
+            DashPicBox.Location = new Point(17, 160);
+            DashPicBox.Name = "DashPicBox";
+            DashPicBox.Size = new Size(45, 42);
+            DashPicBox.TabIndex = 10;
+            DashPicBox.TabStop = false;
+            DashPicBox.Click += DashPicBox_Click;
             // 
             // AccountLabel
             // 
@@ -62,7 +119,7 @@
             AccountLabel.AutoSize = true;
             AccountLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             AccountLabel.LinkColor = Color.White;
-            AccountLabel.Location = new Point(23, 330);
+            AccountLabel.Location = new Point(66, 330);
             AccountLabel.Name = "AccountLabel";
             AccountLabel.Size = new Size(86, 25);
             AccountLabel.TabIndex = 7;
@@ -75,7 +132,7 @@
             HistoryLabel.AutoSize = true;
             HistoryLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             HistoryLabel.LinkColor = Color.White;
-            HistoryLabel.Location = new Point(23, 274);
+            HistoryLabel.Location = new Point(66, 274);
             HistoryLabel.Name = "HistoryLabel";
             HistoryLabel.Size = new Size(71, 25);
             HistoryLabel.TabIndex = 6;
@@ -89,7 +146,7 @@
             CartLabel.AutoSize = true;
             CartLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             CartLabel.LinkColor = Color.White;
-            CartLabel.Location = new Point(23, 221);
+            CartLabel.Location = new Point(66, 221);
             CartLabel.Name = "CartLabel";
             CartLabel.Size = new Size(47, 25);
             CartLabel.TabIndex = 5;
@@ -103,7 +160,7 @@
             DasbaordLabel.AutoSize = true;
             DasbaordLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             DasbaordLabel.LinkColor = Color.White;
-            DasbaordLabel.Location = new Point(23, 168);
+            DasbaordLabel.Location = new Point(66, 168);
             DasbaordLabel.Name = "DasbaordLabel";
             DasbaordLabel.Size = new Size(104, 25);
             DasbaordLabel.TabIndex = 4;
@@ -121,6 +178,7 @@
             pictureBox1.Size = new Size(107, 90);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
@@ -166,6 +224,10 @@
             Load += Accountuc_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)AccPicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)HistPicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CartPicBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DashPicBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             ResumeLayout(false);
@@ -183,5 +245,9 @@
         private Label label1;
         private Panel panel2;
         private Button SignOutBtn;
+        private PictureBox AccPicBox;
+        private PictureBox HistPicBox;
+        private PictureBox CartPicBox;
+        private PictureBox DashPicBox;
     }
 }
